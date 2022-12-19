@@ -34,10 +34,10 @@ namespace Perspective
                 { 0, 0, 0, 0, x4, y4, x4*y4, 1}
             });
             Vector<double> b = Vector<double>.Build.Dense(new double[] { xx1, xx2, xx3, xx4, yy1, yy2, yy3, yy4 });
-            // 參數計算
+            // calculate matrix parameters
             var result = A.Solve(b);
 
-            // 內插
+            // interpolation
             Bitmap bmp = new Bitmap(360, 450);
             for (int i = 0; i < bmp.Width; i++)
             {
